@@ -1,17 +1,17 @@
 /* EX1 */
 
-const arr = [1, 2, 3, 4, 4, 5, 5, 7, 8, 8]
+const arr = [1, 2, 3, 4, 4, 5, 5, 7, 8, 8, 10, 20, 20, 20]
 
-const numbUnice = arr.reduce((acc, cur) => {
-    let count = arr.filter(item => item === cur).length;
-    if(count === 1) {
-        acc.push(cur)
-    }
-    return acc
+const numbUnice = (arrayList) => {
+    return arrayList.reduce((acc, cur) => {
+        if (!acc.includes(cur)) {
+            acc.push(cur)
+        }
+        return acc
 
-}, [])
-
-/* console.log(numbUnice) */
+    }, [])
+}
+console.log(numbUnice(arr))
 
 
 
@@ -103,5 +103,6 @@ const compareitem = (arr) => {
 
 const array = [1, 1, 1, 1, 1]
 const array1 = [1, 2, 1, 2, 1]
-console.log(compareitem(array));
-console.log(compareitem(array1));
+/* console.log(compareitem(array));
+console.log(compareitem(array1)); */
+
